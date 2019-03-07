@@ -32,9 +32,26 @@
             flex-direction:column;
             border: 1px solid black;
         }
+        form input {
+            display:block;
+            width:100%;
+        }
+        label {
+            text-align:center;
+        }
+        
     </style>
 </head>
 <body>
+    <form>
+        <label for="product-name">Product name: <input type="text" name="name" id="product-name"></label>
+        <label for="product-image">Image Url: <input type="url" name="imageUrl" id="product-image"></label>
+        <label for="buyprice">Buying Price: <input type="number" name="buy" id="buyprice"></label>
+        <label for="sellprice">Selling Price: <input type="number" name="buy" id="sellprice"></label>
+        <label for="product-link">Product Link: <input type="url" name="link" id="product-link"></label>
+        <label for="submit-product"><br><input type="submit" value="Submit" id="submitBtn"></label>
+    </form>
+
     <button id="add">Add New Product</button>
     <div id="product-block-grid">
         <template id="product-block-template">
@@ -49,7 +66,7 @@
             </div>
         </template>
     </div>
-    <script>
+    <script src="restdbio.js">
         </script>
 </body>
 </html>

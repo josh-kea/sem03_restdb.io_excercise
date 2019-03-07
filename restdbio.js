@@ -43,10 +43,7 @@
                 image:"https://ae01.alicdn.com/kf/HTB1HcJ7sXYqK1RjSZLeq6zXppXaR/Pet-Soft-Plush-Creative-3D-Carp-Fish-Shape-Cat-Toy-Gifts-Catnip-Fish-Stuffed-Pillow-Doll.jpg",
         }
 
-         addNewProductBtn.addEventListener("click", ()=> {
-             post(postProduct);
-             
-            })
+         
 
             
         
@@ -114,4 +111,41 @@
             
         }
 
-        
+        addNewProductBtn.addEventListener("click", ()=> {
+            //post(postProduct);
+            
+           })
+
+           //document.querySelector('#submitBtn').addEventListener("click", () => {
+
+                const form = document.querySelector("form");
+                form.addEventListener("submit", e => {
+                    form.elements.submit.disabled=false;
+                    e.preventDefault();
+                    console.log("submitted");
+
+                    const formProduct = Object.create(catProduct);
+                    formProduct.name = form.elements.name.value;
+                    formProduct.buyprice = form.elements.buyprice.value;
+                    formProduct.sellprice = form.elements.sellprice.value;
+                    formProduct.link = form.elements.link.value;
+                    formProduct.img = form.elements.imageUrl;
+                   
+                    console.log(formProduct);
+                   
+
+                });
+
+                function test (){
+                    const formProduct = Object.create(catProduct);
+                    formProduct.name = form.elements.name.value;
+                    formProduct.buyprice = form.elements.buyprice.value;
+                    formProduct.sellprice = form.elements.sellprice.value;
+                    formProduct.link = form.elements.link.value;
+                    formProduct.img = form.elements.imageUrl.value;
+                   
+                    console.log(formProduct);
+                }
+             
+
+           //});

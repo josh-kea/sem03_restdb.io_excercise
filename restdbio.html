@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Winning Cat Products!</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        div#product-block-grid{
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr 1fr;
+            grid-column-gap: 5px;
+            
+        }
+        img#image{
+            height:200px;
+            width:200px;
+            text-align: center;
+            
+        }
+
+        div#product-block {
+            width:100%;
+            
+            display: flex;
+            justify-content: center;
+            flex-direction:column;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button id="add">Add New Product</button>
+    <div id="product-block-grid">
+        <template id="product-block-template">
+            <div id="product-block">
+                <img src="" alt="" id="image">
+                <h2 id="name"></h2>
+                <p id="buyprice">Buying Price: <span></span></p>
+                <p id="sellprice">Selling Price: <span></span></p>
+                <p id="profit">Your Profit: <span></span></p>
+                <a id="link" href="" target="_blank">See Product On Aliexpress</a>
+                <button id="remove">Remove Product</button>
+            </div>
+        </template>
+    </div>
+    <script>
+        </script>
+</body>
+</html>
